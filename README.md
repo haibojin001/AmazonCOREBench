@@ -60,10 +60,9 @@ python demo.py --input "./memory foam pillow.jsonl" --out ./out --model gpt-4o
 
 ```bash
 out/
-├── memory_foam_pillow_review.md      # Output under review suffix
-├── memory_foam_pillow_reasoning.md   # Output under reasoning suffix
-├── prompt_review.txt                 # Full constructed prompt (for audit)
-└── prompt_reasoning.txt              # Full constructed prompt (for audit)
+├── memory_foam_pillow_review.md      
+├── memory_foam_pillow_reasoning.md   
+
 ```
 This repository serves as a miniature example of the CORE. Stay tuned for iterative updates
 
