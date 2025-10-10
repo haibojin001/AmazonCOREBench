@@ -20,7 +20,7 @@ cd AmazonCOREBench-Demo
 pip install -r requirements.txt
 ```
 
-### 📦 Data Preparation
+## 📦 Data Preparation
 
 ```bash
 python scraper.py
@@ -28,7 +28,7 @@ python scraper.py
 
 This script saves product listings as a .jsonl file, where each line is one product object.
 
-### 💡 Demo: Controlling Output Ranking
+## 💡 Demo: Controlling Output Ranking
 
 The demo.py script demonstrates how prompt suffixes can control model outputs.
 
@@ -44,7 +44,7 @@ and appends one of two suffix styles:
 
 The outputs are written into Markdown files to visualize the model’s ranking shift.
 
-### 🚀 Run the Demo
+## 🚀 Run the Demo
 
 ```bash
 python demo.py --input "./memory foam pillow.jsonl" --out ./out
