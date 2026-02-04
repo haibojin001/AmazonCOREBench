@@ -10,8 +10,8 @@ The current demo focuses on **Memory Foam Pillows**, showing how different suffi
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/AmazonCOREBench.git
-cd AmazonCOREBench-Demo
+git clone AmazonCOREBench.git
+cd AmazonCOREBench
 ```
 
 ### 2️⃣ Install Dependencies
