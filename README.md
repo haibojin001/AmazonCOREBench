@@ -153,5 +153,31 @@ Each line in the `.jsonl` file should be a product object:
 
 ---
 
+## String-based Pipeline (Shadow-Model, Reference Only)
+
+> ⚠️ **Note**: The string-based method is provided as a conceptual reference implementation of the shadow-model gradient approach (Section 3.4.1). In practice, it performs significantly worse than the query-based strategies — achieving only ~33% @Top-1 vs ~85% for review/reasoning — and produces highly unnatural text that is trivially detectable (~99% human detection rate). **We do not recommend using it in real applications.** It is included here purely for completeness and reproducibility.
+
+The string-based method requires a local GPU and the Llama-3.1-8B model weights:
+
+```bash
+pip install torch transformers
+```
+
+```bash
+python core_string.py   --input "../memory foam pillow.jsonl"   --query "I'm looking to buy a memory foam pillow. Which models are best?"   --target_name "Ultra Pain Relief Cooling Pillow for Neck Support"   --string_len 20   --n_iter 2000   --lr 0.01   --sigma 0.05   --eval_every 100   --shadow_model "meta-llama/Llama-3.1-8B-Instruct"   --device cuda   --output result_string.json
+```
+
+| Argument | Description | Default |
+|---|---|---|
+| `--string_len` | Length of adversarial token string | `20` |
+| `--n_iter` | Gradient descent iterations | `2000` |
+| `--lr` | Learning rate η | `0.01` |
+| `--sigma` | Gaussian noise σ for exploration | `0.05` |
+| `--eval_every` | Evaluate on real LLM every N steps | `100` |
+| `--shadow_model` | HuggingFace model name or local path | `meta-llama/Llama-3.1-8B-Instruct` |
+| `--device` | `cuda` or `cpu` | `cuda` |
+
+---
+
 Stay tuned for iterative updates!
 
