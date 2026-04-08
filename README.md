@@ -77,7 +77,7 @@ We introduce **ProductBench**, a large-scale benchmark spanning:
 python demo.py --input "./memory foam pillow.jsonl" --out ./out
 ```
 
-With OpenAI API (real inference)
+Set your OpenAI API key:
 
 
 ```bash
@@ -90,10 +90,6 @@ out/
 ├── memory_foam_pillow_review.md      
 ├── memory_foam_pillow_reasoning.md   
 
-```
-Set your OpenAI API key:
-```bash
-export OPENAI_API_KEY="sk-..."
 ```
 
 ## Run CORE
